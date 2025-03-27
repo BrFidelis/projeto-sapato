@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de Sapatos</title>
+    <style>
+        /* Estilo geral da página */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        p {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        /* Estilo das seções */
+        section {
+            padding: 20px;
+            margin: 20px;
+        }
+
+        h2 {
+            color: rgb(117, 117, 255);
+            font-size: 28px;
+            border-bottom: 2px solid rgb(117, 117, 255);
+            padding-bottom: 10px;
+        }
+
+        article {
+            background-color: black;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+            padding: 15px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        article:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgb(138, 138, 245);
+        }
+
+        article img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        article h3 {
+            font-size: 24px;
+            color: white;
+            margin: 10px 0;
+        }
+
+        article p {
+            font-size: 16px;
+            color: white;
+        }
+
+        /* Estilo para a lista de categorias */
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        ul li a {
+            text-decoration: none;
+            font-size: 18px;
+            color: rgb(117, 117, 255);
+            transition: color 0.3s ease;
+        }
+
+        ul li a:hover {
+            color: rgb(117, 117, 255);
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: rgb(117, 117, 255);
+            color: black;
+            text-align: center;
+            padding:0px ;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            position: fixed;
+        }
+
+        .content {
+            flex: 1; /* Isso faz com que o conteúdo ocupe o espaço disponível */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo à nossa Loja de Calçados!</h1>
+        <p>Encontre os melhores calçados para todos os estilos e ocasiões.</p>
+    </header>
+
+    <section>
+        <h2>Novidades</h2>
+        <article>
+            <h3>Sapato Social Masculino</h3>
+            <img src="imagens/tenis-basquete-mb01.jpg" alt="MB.01 Rick and Morty" width="300px">
+            <p>O jogador de basquete LaMelo Ball não é desse mundo. Seu estilo pessoal e sua trajetória nas quadras são inusitados. E o seu novo tênis de assinatura não podia ser diferente. Arrojado e chamativo, o modelo MB.01 é ‘Melo em formato tênis’. Se você tivesse que jogar bola no espaço, seria com eles. E assim como o Melo, eles são diferentes de tudo que a liga já viu.</p>
+            <button onclick="adicionarCarrinho('MB.01 Rick and Morty')">Adicionar ao Carrinho</button>
+        </article>
+        <article>
+            <h3>Sapato Casual Feminino</h3>
+            <img src="imagens/tenis-kobe-grinch.jpg" alt="Kobe 6 Grinch" width="350px">
+            <p>O Kobe Protro 6 Grinch não é apenas um tênis, é uma homenagem ao legado de Kobe Bryant e à paixão que ele tinha pelo basquete. Com um design ousado e desempenho excepcional, este tênis é a escolha perfeita para os fãs do esporte e aqueles que desejam elevar seu jogo.</p>
+            <button onclick="adicionarCarrinho('Kobe 6 Grinch')">Adicionar ao Carrinho</button>
+        </article>
+    </section>
+
+    <div class="content">
+        <section>
+            <h2>Categorias</h2>
+            <ul>
+                <li><a href="#">Tênis de Basquete</a></li>
+                <li><a href="#">Chuteiras Campo</a></li>
+                <li><a href="#">Tênis Futsal</a></li>
+                <li><a href="#">Chinelos Slide</a></li>
+            </ul>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2025 Loja de Calçados. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // Função para adicionar produto ao carrinho
+        function adicionarCarrinho(produto) {
+            alert(produto + ' foi adicionado ao carrinho!');
+        }
+    </script>
+</body>
+</html>
